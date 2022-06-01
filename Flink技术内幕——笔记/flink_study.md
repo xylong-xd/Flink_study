@@ -87,7 +87,7 @@ WatermarkGenerator：主要负责按照既定的方式，基于时间戳生成�
 
 ### 水位线传递
 
-![image-20220525200242644](.\img\image-20220525200242644.png)
+![image-20220525200242644](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/image-20220525200242644.png)
 
 # 窗口 Window
 
