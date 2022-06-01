@@ -91,7 +91,7 @@ WatermarkGenerator：主要负责按照既定的方式，基于时间戳生成�
 
 # 窗口 Window
 
-![image-20220526093410801](img\image-20220526093410801.png)
+![image-20220526093410801](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/image-20220526093410801.png)
 
 ## 实现类
 * EvictingWindowOperator(带有驱逐器 <!-- 过滤 -->)      
@@ -137,7 +137,7 @@ DynamicProcessingTimeSessionWindows
    MergingWindowSet中有一个map,(Mao<Window,Window>),保存窗口和状态窗口对应关系，通过（1,8）对应的状态窗口（1,4）获取合并后的状态，即数据集
    ```
 
-   ![merge](C:\Users\龙星宇\Desktop\xue\flink_study\img\merge.png)
+   ![merge](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/merge.png)
 
    
 
@@ -203,7 +203,7 @@ GlobalWindow
 * ResourceManager
 * TaskExecutor
 
-![778d472855948dfb04cff95e3282aea3.png](./img\778d472855948dfb04cff95e3282aea3.png)
+![778d472855948dfb04cff95e3282aea3.png](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/778d472855948dfb04cff95e3282aea3.png)
 
 
 ###  REST
@@ -212,7 +212,7 @@ GlobalWindow
 
 核心：
                 WebMonitorEndpoint 类
-       ![WebMonitorEndpoint.png](./img\WebMonitorEndpoint.png)
+       ![WebMonitorEndpoint.png](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/WebMonitorEndpoint.png)
                 
 MiniDispatcherRestEndpoint – Per-Job模式
 DispatcherRestEndpoint     – Session模式
@@ -256,7 +256,7 @@ WebMonitorEndpoint 启动（完成即可为外部提供REST服务）：
     Dispatcher 组件负责接收作业的提交。对作业进行持久化、产生新的JonMaster执行作业、在JobManager节点崩溃恢复时恢复所有作业的执行，记忆管理作业对应JobMaster的状态
 
 Dispatcher 组件相关类图：
-![Dispatcher.png](./img\Dispatcher.png)
+![Dispatcher.png](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/Dispatcher.png)
 
 
 StandaloneDispatcher   – Session
@@ -307,7 +307,7 @@ ResourceManager 组件负责资源的分配与释放，以及资源状态的管�
 
 ResourceManage类图：
 
-![ResourceManager](./\img\ResourceManager.png)
+![ResourceManager](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/ResourceManager.png)
 
 
 
@@ -319,7 +319,7 @@ ResourceManage类图：
 2. JobMaster 与 ResourceManager 的交互体现在申请Slot，释放Slot，将JobMaster注册到ResourceManager，以及组件间的心跳。
 3. TaskExecutor   ——————   将TaskExecutor 注册到ResourceManager ，汇报TaskExecutor上Slot的情况，以及组件间的心跳。
 
-![a48044f9c1c547f58ec4cf2a1ee16683](./img\a48044f9c1c547f58ec4cf2a1ee16683.png)
+![a48044f9c1c547f58ec4cf2a1ee16683](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/a48044f9c1c547f58ec4cf2a1ee16683.png)
 
 
 
@@ -353,7 +353,7 @@ TaskManager 启动    -->    注册到ResourceManager   -->   Slot信息汇报�
 
 
 
-![JobMaster](C:\Users\龙星宇\Desktop\xue\flink_study\img\JobMaster.png)
+![JobMaster](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/JobMaster.png)
 
 
 
@@ -393,7 +393,7 @@ Scheduler 调度作业时需分配Slot，在SlotPool中没有匹配的空闲Slot
 
 
 
-![TaskExecutor](C:\Users\龙星宇\Desktop\xue\flink_study\img\TaskExecutor.png)
+![TaskExecutor](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/TaskExecutor.png)
 
 ```
 TaskExecutor 是TaskManager 的核心部分，负责多个Task的执行
@@ -494,7 +494,7 @@ Master 的首领选举和检索是依赖Curator客户端与ZooKeeper服务交互
 
 Curator暴露于ZooKeeper的状态：
 
-![未命名绘图](.\img\未命名绘图.png)
+![未命名绘图](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/未命名绘图.png)
 
 
 
@@ -924,7 +924,7 @@ PartitionableListState中有各种对状态值得操作
 
 
 
-<img src="C:\Users\龙星宇\Desktop\xue\flink_study\img\v2-c5c7936dd56609251c82def5063bbacc_r.jpg" alt="v2-c5c7936dd56609251c82def5063bbacc_r" style="zoom:200%;" />
+<img src="https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/v2-c5c7936dd56609251c82def5063bbacc_r.jpg" alt="v2-c5c7936dd56609251c82def5063bbacc_r" style="zoom:200%;" />
 
 
 
@@ -939,11 +939,11 @@ program --> StreamGraph --> JobGraph  -->  ExcutionGraph
 ExcutionGraph 中的ExecutionVertex 经Slot分配最终部署到TaskMannger
 ```
 
-![20200828104029128](C:\Users\龙星宇\Desktop\xue\flink_study\img\20200828104029128.png)
+![20200828104029128](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/20200828104029128.png)
 
-![20200828104159395](C:\Users\龙星宇\Desktop\xue\flink_study\img\20200828104159395.png)
+![20200828104159395](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/20200828104159395.png)
 
-![20200924224241524](C:\Users\龙星宇\Desktop\xue\flink_study\img\20200924224241524.png)
+![20200924224241524](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/20200924224241524.png)
 
 
 
@@ -1109,11 +1109,11 @@ JobVertex 可以包括多个算子，也就是把多个算子根据一定规则�
 算子链：所有 chain 在一起的 sub-task 都会在同一个线程（即 TaskManager 的 slot）中执行，能够减少不必要的数据交换、序列化和上下文切换，从而提高作业的执行效率。
 ```
 
-<img src="C:\Users\龙星宇\Desktop\xue\flink_study\img\chain.png" alt="chain" style="zoom: 80%;" />
+<img src="https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/chain.png" alt="chain" style="zoom: 80%;" />
 
 
 
-<img src="C:\Users\龙星宇\Desktop\xue\flink_study\img\chain1.png" alt="chain1" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/chain1.png" alt="chain1" style="zoom:80%;" />
 
 ```
 算子链是在优化逻辑计划时加入的，也就是由 StreamGraph 生成 JobGraph 的过程中
@@ -1448,7 +1448,7 @@ private <IN, OUT> WatermarkGaugeExposingOutput<StreamRecord<IN>> createChainedOp
 
 chainedOperator 产生之后，将它们通过 ChainingOutput 连接起来，形成如下图所示的结构。
 
-![7zcmtqthnd](C:\Users\龙星宇\Desktop\xue\flink_study\img\7zcmtqthnd.png)
+![7zcmtqthnd](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/7zcmtqthnd.png)
 
 ```   
 逆序 <= 类似递归，最底层先return     ?
@@ -1890,7 +1890,7 @@ MailboxProcessor内部还有一个MailboxDefaultAction，存放默认的数据�
 
 MailboxExecutor 对外暴露submit方法(将Mail放到TaskMailBox)，存放在MailboxProcessor中
 
-![MailBox](C:\Users\龙星宇\Desktop\xue\flink_study\img\MailBox.png)
+![MailBox](https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/MailBox.png)
 
 
 
@@ -1923,7 +1923,7 @@ MailboxExecutor 对外暴露submit方法(将Mail放到TaskMailBox)，存放在Ma
 > - 无特殊事件且有network.buffer不为空，执行processInput处理数据
 > - 无事可做，执行await等待唤醒
 
-<img src="C:\Users\龙星宇\Desktop\xue\flink_study\img\M.png" alt="M" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/xylong-xd/Flink_study/main/Flink%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0/img/M.png" alt="M" style="zoom: 50%;" />
 
 
 
